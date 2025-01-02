@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Gameplay\Utils\" />
+    <Folder Include="Runtime\Gameplay\Utils\" />
   </ItemGroup>
 
 </Project>
