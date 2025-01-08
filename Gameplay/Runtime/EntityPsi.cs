@@ -1,5 +1,8 @@
 ﻿namespace SpaceSmuggler.Runtime
 {
+    /// <summary>
+    /// Mana/psi model for entity.
+    /// </summary>
     public sealed class EntityPsi
     {
         /// <summary>

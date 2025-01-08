@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SpaceSmuggler.Gameplay.Runtime
+﻿namespace SpaceSmuggler.Runtime
 {
     internal class EntityUpdater
     {
