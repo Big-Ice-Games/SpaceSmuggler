@@ -1,4 +1,6 @@
-﻿namespace SpaceSmuggler.Runtime
+﻿using System.Collections.Generic;
+
+namespace SpaceSmuggler.Runtime
 {
     /// <summary>
     /// This class represents players and other entities in the match.
@@ -6,11 +8,24 @@
     /// </summary>
     public class Entity
     {
-        public float Shield { get; set; }
-        public float ShieldRegenerationTick { get; set; }
+        public EntityShield Shield { get; set; }
+
+        public List<EntityWeapon> Weapons { get; set; }
+
+        public EntityPsi Psi { get; set; }
+
+        /// <summary>
+        /// Maximum hull points
+        /// </summary>
         public float HullPoints { get; set; }
-        public float PsiPoints { get; set; }
-        public float PsiRegenerationTick { get; set; }
-        public int LastTickReceivedDamage { get; set; }
+
+        /// <summary>
+        /// Current hull points.
+        /// </summary>
+        public float CurrentHullPoints { get; set; }
+
+        
+
+        
     }
 }
