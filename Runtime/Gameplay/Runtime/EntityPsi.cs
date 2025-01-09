@@ -1,4 +1,4 @@
-﻿namespace SpaceSmuggler.Runtime
+﻿namespace SpaceSmuggler.Gameplay.Runtime
 {
     /// <summary>
     /// Mana/psi model for entity.

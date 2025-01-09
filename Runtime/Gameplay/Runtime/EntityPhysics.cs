@@ -1,4 +1,4 @@
-﻿namespace SpaceSmuggler.Runtime
+﻿namespace SpaceSmuggler.Gameplay.Runtime
 {
     /// <summary>
     /// This class contains final values used for moving entity.

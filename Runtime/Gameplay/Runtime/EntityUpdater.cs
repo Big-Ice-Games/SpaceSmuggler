@@ -1,4 +1,4 @@
-﻿namespace SpaceSmuggler.Runtime
+﻿namespace SpaceSmuggler.Gameplay.Runtime
 {
     internal class EntityUpdater
     {

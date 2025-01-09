@@ -1,4 +1,4 @@
-﻿namespace SpaceSmuggler
+﻿namespace SpaceSmuggler.Gameplay.Types.Enums
 {
     /// <summary>
     /// This type define how we are representing single attack in the game.

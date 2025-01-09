@@ -1,4 +1,4 @@
-﻿namespace SpaceSmuggler.Runtime
+﻿namespace SpaceSmuggler.Gameplay.Runtime
 {
     /// <summary>
     /// Used to display entity name in the game.

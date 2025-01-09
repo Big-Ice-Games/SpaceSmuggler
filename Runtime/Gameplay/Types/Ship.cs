@@ -11,11 +11,7 @@ namespace SpaceSmuggler.Gameplay.Types
     /// </summary>
     public sealed class Ship
     {
-        /// <summary>
-        /// Every ship have unique name. It's NOT a player nickname.
-        /// Example: Millennium Falcon, Scyth Scout etc.
-        /// </summary>
-        public string Name { get; set; }
+        public ShipAppearance Appearance { get; set; }
 
         /// <summary>
         /// Ship provides HullPoints.
@@ -38,10 +34,5 @@ namespace SpaceSmuggler.Gameplay.Types
         /// Available component slots on this ship.
         /// </summary>
         public List<ShipComponentSlot> Equipment { get; set; }
-
-        /// <summary>
-        /// Ship model is represented by its unique <see cref="Name"/> but this class overrides all the colors, textures, decals etc.
-        /// </summary>
-        public ShipAppearance Appearance { get; set; }
     }
 }

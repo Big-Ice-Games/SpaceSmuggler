@@ -12,6 +12,11 @@ namespace SpaceSmuggler.Gameplay.Types
     /// </summary>
     public sealed class ShipAppearance
     {
+        /// <summary>
+        /// Every ship have unique name. It's NOT a player nickname.
+        /// Example: Millennium Falcon, Scyth Scout etc.
+        /// </summary>
+        public string Name { get; set; }
         public Color ColorA { get; set; }
         public Color ColorB { get; set; }
         public Color ColorC { get; set; }
