@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Photon.Deterministic;
-using SpaceSmuggler.Gameplay.Types;
+﻿using Photon.Deterministic;
 
 namespace SpaceSmuggler.Gameplay.Runtime
 {
@@ -9,12 +7,16 @@ namespace SpaceSmuggler.Gameplay.Runtime
     /// </summary>
     public sealed class EntityShield
     {
-        public EntityShield(ShipComponent shieldComponent, ShieldBlueprint blueprint, List<Property> properties, Skills skills, Stats stats)
+        public EntityShield(FP shield, FP shieldRegenerationPerSystemTick, FP shieldRegenerationEnergyCostPerSystemTick)
         {
-
+            IsActive = true;
+            Shield = shield;
+            CurrentShield = shield;
+            ShieldRegenerationPerSystemTick = shieldRegenerationPerSystemTick;
+            ShieldRegenerationEnergyCostPerSystemTick = shieldRegenerationEnergyCostPerSystemTick;
         }
 
-        public EntityShield(){}
+        public EntityShield() {}
 
         /// <summary>
         /// Is this component active or disabled by a player.

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using BIG;
 using SpaceSmuggler.Gameplay.Runtime;
 using SpaceSmuggler.Gameplay.Types;
@@ -25,17 +24,6 @@ namespace SpaceSmuggler.Providers
             return new Ship();
         }
 
-        public static Pilot GetRandomPilot()
-        {
-            var rarity = CollectionsExtension.GetRandomEnum<Rarity>();
-            return new Pilot()
-            {
-                Name = "RandomPilot",
-                Portrait = "RandomPilotPortrait",
-                Rarity = rarity,
-                Properties = GetRandomProperties(rarity)
-            };
-        }
 
         /// <summary>
         /// Get random properties for component or pilot based on the rarity.
