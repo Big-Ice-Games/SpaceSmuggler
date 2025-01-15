@@ -5,6 +5,8 @@
     /// </summary>
     public enum ShipDecal
     {
-        None
+        None,
+        Rabbit,
+        Sign
     }
 }

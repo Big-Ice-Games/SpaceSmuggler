@@ -2,34 +2,13 @@
 {
     public enum ShipComponentType
     {
-        /// <summary>
-        /// Weapon.
-        /// </summary>
-        Beam,
-
-        /// <summary>
-        /// Weapon.
-        /// </summary>
-        Disruptor,
-
-        /// <summary>
-        /// Weapon.
-        /// </summary>
-        Plasma,
-
-        /// <summary>
-        /// Weapon.
-        /// </summary>
-        RocketsLauncher,
-
+        None,
+        Weapon,
         Shield,
         EnergyCore,
         Engine,
         Scanner,
-
-        ArmorForward,
-        ArmorBackward,
-        ArmorStarboard,
-        ArmorLarboard
+        Armor,
+        Pilot
     }
 }

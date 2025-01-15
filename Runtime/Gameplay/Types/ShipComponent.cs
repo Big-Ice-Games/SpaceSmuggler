@@ -2,23 +2,25 @@
 using BIG;
 using SpaceSmuggler.Gameplay.Types.Enums;
 
-namespace SpaceSmuggler.Gameplay.Types.Components
+namespace SpaceSmuggler.Gameplay.Types
 {
     /// <summary>
     /// Base class for every ship component.
     /// </summary>
     [Preserve]
-    public abstract class ShipComponent
+    public sealed class ShipComponent
     {
+        [Preserve] public string BlueprintName { get; set; }
+
         /// <summary>
         /// <see cref="ShipComponentType"/>
         /// </summary>
         [Preserve] public ShipComponentType ComponentType { get; set; }
 
         /// <summary>
-        /// <see cref="GalaxyPart"/>
+        /// <see cref="Region"/>
         /// </summary>
-        [Preserve] public GalaxyPart ComponentSubType { get; set; }
+        [Preserve] public Region ComponentSubType { get; set; }
 
         /// <summary>
         /// <see cref="Rarity"/>

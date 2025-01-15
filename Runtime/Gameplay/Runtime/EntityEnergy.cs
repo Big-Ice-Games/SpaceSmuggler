@@ -1,9 +1,11 @@
-﻿namespace SpaceSmuggler.Gameplay.Runtime
+﻿using Photon.Deterministic;
+
+namespace SpaceSmuggler.Gameplay.Runtime
 {
     public sealed class EntityEnergy
     {
-        public float MaxEnergy { get; set; }
-        public float Energy { get; set; }
-        public float EnergyLoadPerTick { get; set; }
+        public FP MaxEnergy { get; set; }
+        public FP Energy { get; set; }
+        public FP EnergyLoadPerTick { get; set; }
     }
 }

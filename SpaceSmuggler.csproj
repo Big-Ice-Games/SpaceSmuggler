@@ -12,6 +12,9 @@
     <Reference Include="BIG">
       <HintPath>..\BIG\bin\Debug\netstandard2.1\BIG.dll</HintPath>
     </Reference>
+    <Reference Include="Quantum.Deterministic">
+      <HintPath>Quantum.Deterministic.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

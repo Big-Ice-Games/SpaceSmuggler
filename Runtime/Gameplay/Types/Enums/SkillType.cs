@@ -36,7 +36,7 @@
         Engineering,
 
         /// <summary>
-        /// Increase psi regeneration ratio.
+        /// Increase spell cast time and decrease cooldown.
         /// Increase hit chance for beams and plasma.
         /// </summary>
         Focus,
@@ -82,7 +82,7 @@
 
         /// <summary>
         /// Provides active abilities.
-        /// Cost psi points.
+        /// Cost energy.
         /// </summary>
         IceKinesis,
 

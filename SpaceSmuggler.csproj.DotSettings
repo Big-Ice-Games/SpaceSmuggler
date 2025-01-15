@@ -7,4 +7,5 @@
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=gameplay_005Ctypes_005Cenums/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=gameplay_005Cutils/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=runtime/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=runtime_005Cgameplay/@EntryIndexedValue">False</s:Boolean></wpf:ResourceDictionary>
+	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=runtime_005Cgameplay/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=runtime_005Cgameplay_005Ctypes_005Cblueprints/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

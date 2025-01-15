@@ -1,15 +1,17 @@
-﻿namespace SpaceSmuggler.Gameplay.Runtime
+﻿using Photon.Deterministic;
+
+namespace SpaceSmuggler.Gameplay.Runtime
 {
     /// <summary>
     /// This class contains final values used for moving entity.
     /// </summary>
     public sealed class EntityPhysics
     {
-        public float Acceleration { get; set; }
-        public float Mass { get; set; }
-        public float Force { get; set; }
-        public float RotationForce { get; set; }
-        public float Drag { get; set; }
-        public float RotationDrag { get; set; }
+        public FP Acceleration { get; set; }
+        public FP Mass { get; set; }
+        public FP Force { get; set; }
+        public FP RotationForce { get; set; }
+        public FP Drag { get; set; }
+        public FP RotationDrag { get; set; }
     }
 }

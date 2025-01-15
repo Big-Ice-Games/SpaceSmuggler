@@ -6,6 +6,9 @@
     /// </summary>
     public enum SpecialTexture
     {
-        None
+        None,
+        Camo,
+        Rainbow,
+        Zebra
     }
 }

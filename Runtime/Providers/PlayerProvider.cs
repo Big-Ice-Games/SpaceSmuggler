@@ -106,5 +106,29 @@ namespace SpaceSmuggler.Providers
                     return 0;
             }
         }
+
+        public static ShipComponent GetRandomComponent(ShipComponentType componentType)
+        {
+            switch (componentType)
+            {
+                case ShipComponentType.Beam:
+                    return GetRandomBeamWeapon();
+            }
+        }
+
+        public static Weapon GetRandomBeamWeapon()
+        {
+            return new Weapon();
+        }
+
+        public static Skills GetRandomSkills(int level)
+        {
+            return new Skills();
+        }
+
+        public static Stats GetRandomStats(int stats)
+        {
+            return new Stats();
+        }
     }
 }

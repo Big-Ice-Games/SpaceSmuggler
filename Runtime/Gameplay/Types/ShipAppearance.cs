@@ -1,4 +1,5 @@
-﻿using BIG.Types;
+﻿using BIG;
+using BIG.Types;
 using SpaceSmuggler.Gameplay.Types.Enums;
 
 namespace SpaceSmuggler.Gameplay.Types
@@ -10,20 +11,16 @@ namespace SpaceSmuggler.Gameplay.Types
     /// <see cref="SpecialTexture"/> can override colors applying special appearance to the ship.
     /// <see cref="DecalA"/> and <see cref="DecalB"/> may assign special decals on up to 2 available decal slots.
     /// </summary>
+    [Preserve]
     public sealed class ShipAppearance
     {
-        /// <summary>
-        /// Every ship have unique name. It's NOT a player nickname.
-        /// Example: Millennium Falcon, Scyth Scout etc.
-        /// </summary>
-        public string Name { get; set; }
-        public Color ColorA { get; set; }
-        public Color ColorB { get; set; }
-        public Color ColorC { get; set; }
-        public Color Emission { get; set; }
-        public Color ThrustersColor { get; set; }
-        public SpecialTexture SpecialTexture { get; set; }
-        public ShipDecal DecalA { get; set; }
-        public ShipDecal DecalB { get; set; }
+        [Preserve] public Color ColorA { get; set; }
+        [Preserve] public Color ColorB { get; set; }
+        [Preserve] public Color ColorC { get; set; }
+        [Preserve] public Color Emission { get; set; }
+        [Preserve] public Color ThrustersColor { get; set; }
+        [Preserve] public SpecialTexture SpecialTexture { get; set; }
+        [Preserve] public ShipDecal DecalA { get; set; }
+        [Preserve] public ShipDecal DecalB { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Photon.Deterministic;
 using SpaceSmuggler.Gameplay.Types;
 
 namespace SpaceSmuggler.Gameplay.Runtime
@@ -8,6 +9,28 @@ namespace SpaceSmuggler.Gameplay.Runtime
     /// </summary>
     public class Entity
     {
+        public Entity(
+            EntityDescription description,
+            ShipAppearance appearance,
+            EntityShield shield,
+            List<EntityWeapon> weapons,
+            EntityEnergy energy,
+            float hullPoints,
+            float currentHullPoints,
+            EntityPhysics physics)
+        {
+            Description = description;
+            Appearance = appearance;
+            Shield = shield;
+            Weapons = weapons;
+            Energy = energy;
+            HullPoints = hullPoints;
+            CurrentHullPoints = currentHullPoints;
+            Physics = physics;
+        }
+
+        public Entity(){}
+
         /// <summary>
         /// Description is used to display entity name and UI type on the game client side.
         /// </summary>
@@ -29,11 +52,6 @@ namespace SpaceSmuggler.Gameplay.Runtime
         public List<EntityWeapon> Weapons { get; set; }
 
         /// <summary>
-        /// Psi (mana).
-        /// </summary>
-        public EntityPsi Psi { get; set; }
-
-        /// <summary>
         /// Energy.
         /// </summary>
         public EntityEnergy Energy { get; set; }
@@ -41,16 +59,18 @@ namespace SpaceSmuggler.Gameplay.Runtime
         /// <summary>
         /// Maximum hull points
         /// </summary>
-        public float HullPoints { get; set; }
+        public FP HullPoints { get; set; }
 
         /// <summary>
         /// Current hull points.
         /// </summary>
-        public float CurrentHullPoints { get; set; }
+        public FP CurrentHullPoints { get; set; }
 
         /// <summary>
         /// Physics values for entity.
         /// </summary>
         public EntityPhysics Physics { get; set; }
+
+
     }
 }

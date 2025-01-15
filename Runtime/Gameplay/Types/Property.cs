@@ -1,4 +1,4 @@
-﻿using SpaceSmuggler.Gameplay.Types.Components;
+﻿using System;
 using SpaceSmuggler.Gameplay.Types.Enums;
 
 namespace SpaceSmuggler.Gameplay.Types
@@ -14,7 +14,7 @@ namespace SpaceSmuggler.Gameplay.Types
     /// it will store specified <see cref="SkillType"/> or <see cref="StatType"/> in associated fields. Otherwise these field should store enum values "None".
     ///
     /// Value of the property is always stored in <see cref="Value"/> field.
-    /// In most of cases it represents % Percentage % value.
+    /// In most of the cases it represents % Percentage % value.
     /// </summary>
     public sealed class Property
     {
@@ -36,6 +36,33 @@ namespace SpaceSmuggler.Gameplay.Types
         /// <summary>
         /// Value of the bonus. In most cases %.
         /// </summary>
-        public float Value { get; set; }
+        public int Value { get; set; }
+
+        public static bool operator ==(Property p1, Property p2)
+        {
+            if ((object)p1 == null)
+                return (object)p2 == null;
+
+            return p1.Equals(p2);
+        }
+
+        public static bool operator !=(Property p1, Property p2)
+        {
+            return !(p1 == p2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            var p2 = (Property)obj;
+            return (Type == p2.Type && SkillType == p2.SkillType && StatType == p2.StatType);
+        }
+
+        public override int GetHashCode()
+        {
+            return Type.GetHashCode() ^ SkillType.GetHashCode() ^ StatType.GetHashCode();
+        }
     }
 }

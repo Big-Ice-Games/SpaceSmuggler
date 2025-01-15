@@ -16,10 +16,30 @@ namespace SpaceSmuggler.Gameplay.Utils
             shipAppearance.Emission = Color.Default.Randomize();
             shipAppearance.ThrustersColor = Color.Default.Randomize();
 
-            shipAppearance.DecalA = ShipDecal.None;
-            shipAppearance.DecalB = ShipDecal.None;
-            shipAppearance.SpecialTexture = SpecialTexture.None;
+            shipAppearance.DecalA = GetRandomDecal();
+            shipAppearance.DecalB = GetRandomDecal();
+            shipAppearance.SpecialTexture = GetSpecialRandomTexture();
             return shipAppearance;
+        }
+
+        /// <summary>
+        /// Gives 10% chance for special texture.
+        /// </summary>
+        /// <returns>Special texture to be assigned in <see cref="ShipAppearance.SpecialTexture"/></returns>
+        public static SpecialTexture GetSpecialRandomTexture()
+        {
+            var chance = CollectionsExtension.Random.MemoryFriendlyRandom(0, 1000);
+            return chance > 900 ? SpecialTexture.None.GetRandomEnum() : SpecialTexture.None;
+        }
+
+        /// <summary>
+        /// Gives 10% chance for decal.
+        /// </summary>
+        /// <returns>Decal to be assigned in <see cref="ShipAppearance"/></returns>
+        public static ShipDecal GetRandomDecal()
+        {
+            var chance = CollectionsExtension.Random.MemoryFriendlyRandom(0, 1000);
+            return chance > 900 ? ShipDecal.None.GetRandomEnum() : ShipDecal.None;
         }
     }
 }

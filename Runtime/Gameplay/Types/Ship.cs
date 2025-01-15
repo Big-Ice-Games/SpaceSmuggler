@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using SpaceSmuggler.Gameplay.Types.Components;
-using SpaceSmuggler.Gameplay.Types.Enums;
+﻿using BIG;
 
 namespace SpaceSmuggler.Gameplay.Types
 {
@@ -9,30 +7,32 @@ namespace SpaceSmuggler.Gameplay.Types
     /// does not provide runtime data like current amount of hull points, shield points etc.
     /// Ship is used to calculate all required values to be used during play session.
     /// </summary>
+    [Preserve]
     public sealed class Ship
     {
-        public ShipAppearance Appearance { get; set; }
+        /// <summary>
+        /// Player may have multiple ships. This id is used to aim specific ship from players collection.
+        /// </summary>
+        [Preserve] public string ShipId { get; set; }
 
         /// <summary>
-        /// Ship provides HullPoints.
-        /// It's a base value modified in calculations by <see cref="StatType.Strength"/> and <see cref="PropertyType.HullPoints"/>.
-        /// Also affected by spells and buffs.
+        /// Ship appearance can override default one from <see cref="ShipBlueprint"/>
         /// </summary>
-        public float HullPoints { get; set; }
+        [Preserve] public ShipAppearance Appearance { get; set; }
 
-        /// <summary>
-        /// Mass is used to calculate acceleration and rotation speed.
-        /// </summary>
-        public float Mass { get; set; }
+        [Preserve] public ShipBlueprint ShipBlueprint { get; set; }
 
-        /// <summary>
-        /// Slots for pilots. This list count can be 0 on small ships.
-        /// </summary>
-        public List<PilotSeat> Pilots { get; set; }
+        [Preserve] public Equipment Equipment { get; set; }
 
-        /// <summary>
-        /// Available component slots on this ship.
-        /// </summary>
-        public List<ShipComponentSlot> Equipment { get; set; }
+        [Preserve] public Ship(){}
+
+        [Preserve]
+        public Ship(string shipId, ShipBlueprint blueprint)
+        {
+            ShipId = shipId;
+            Appearance = blueprint.ShipAppearance;
+            ShipBlueprint = blueprint;
+            Equipment = new Equipment(blueprint.WeaponSlots, blueprint.ArmorSlots, blueprint.PilotSeats);
+        }
     }
 }

@@ -1,10 +1,9 @@
-﻿using SpaceSmuggler.Gameplay.Types.Components;
-using SpaceSmuggler.Gameplay.Types.Enums;
+﻿using SpaceSmuggler.Gameplay.Types.Enums;
 
 namespace SpaceSmuggler.Gameplay.Types
 {
     /// <summary>
-    /// Resource that is required by <see cref="BluePrint"/>s to be forged into <see cref="ShipComponent"/>.
+    /// Resource that is required by <see cref="Blueprint"/>s to be forged into <see cref="ShipComponent"/>.
     /// Scraps are dropped from destroyed opponents.
     /// Player can also melt them in the forge into <see cref="Ore"/>s.
     /// </summary>

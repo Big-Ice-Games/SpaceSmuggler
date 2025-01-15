@@ -1,4 +1,5 @@
-﻿using SpaceSmuggler.Gameplay.Types.Enums;
+﻿using Photon.Deterministic;
+using SpaceSmuggler.Gameplay.Types.Enums;
 
 namespace SpaceSmuggler.Gameplay.Runtime
 {
@@ -16,41 +17,36 @@ namespace SpaceSmuggler.Gameplay.Runtime
         /// <summary>
         /// Min damage for calculation.
         /// </summary>
-        public float MinDamage { get; set; }
+        public FP MinDamage { get; set; }
 
         /// <summary>
         /// Max damage for calculation.
         /// </summary>
-        public float MaxDamage { get; set; }
+        public FP MaxDamage { get; set; }
 
         /// <summary>
         /// Chance for success hit.
         /// </summary>
-        public float HitChance { get; set; }
+        public FP HitChance { get; set; }
 
         /// <summary>
         /// Chance for critical hit. Used for calculation only for success hit.
         /// </summary>
-        public float CriticalHitChance { get; set; }
+        public FP CriticalHitChance { get; set; }
 
         /// <summary>
         /// How much damage is increased for critical hit.
         /// </summary>
-        public float CriticalHitMultiplier { get; set; }
+        public FP CriticalHitMultiplier { get; set; }
       
         /// <summary>
-        /// How much energy this weapon consume for full reload.
+        /// How much energy this weapon consume by shoot.
         /// </summary>
-        public float EnergyCost { get; set; }
+        public FP EnergyCost { get; set; }
 
         /// <summary>
-        /// How much energy is currently loaded into weapon.
+        /// Weapon cooldown.
         /// </summary>
-        public float CurrentEnergy { get; set; }
-
-        /// <summary>
-        /// How much energy active weapon consume per tick if CurrentEnergy is lower than EnergyCost.
-        /// </summary>
-        public float EnergyLoadPerTick { get; set; }
+        public FP Cooldown { get; set; }
     }
 }

@@ -12,86 +12,86 @@ namespace SpaceSmuggler.Gameplay.Types
         /// <summary>
         /// <see cref="SkillType.Backstab"/>
         /// </summary>
-        public float Backstab { get; set; }
+        public int Backstab { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Beam"/>
         /// </summary>
-        public float Beam { get; set; }
+        public int Beam { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Disrupt"/>
         /// </summary>
-        public float Disrupt { get; set; }
+        public int Disrupt { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Dodge"/>
         /// </summary>
-        public float Dodge { get; set; }
+        public int Dodge { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Engineering"/>
         /// </summary>
-        public float Engineering { get; set; }
+        public int Engineering { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Focus"/>
         /// </summary>
-        public float Focus { get; set; }
+        public int Focus { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Hacking"/>
         /// </summary>
-        public float Hacking { get; set; }
+        public int Hacking { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Hide"/>
         /// </summary>
-        public float Hide { get; set; }
+        public int Hide { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Mining"/>
         /// </summary>
-        public float Mining { get; set; }
+        public int Mining { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Navigation"/>
         /// </summary>
-        public float Navigation { get; set; }
+        public int Navigation { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Plasma"/>
         /// </summary>
-        public float Plasma { get; set; }
+        public int Plasma { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.IceKinesis"/>
         /// </summary>
-        public float IceKinesis { get; set; }
+        public int IceKinesis { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Repair"/>
         /// </summary>
-        public float Repair { get; set; }
+        public int Repair { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Rockets"/>
         /// </summary>
-        public float Rockets { get; set; }
+        public int Rockets { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Resistance"/>
         /// </summary>
-        public float Resistance { get; set; }
+        public int Resistance { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Shields"/>
         /// </summary>
-        public float Shields { get; set; }
+        public int Shields { get; set; }
 
         /// <summary>
         /// <see cref="SkillType.Tactics"/>
         /// </summary>
-        public float Tactics { get; set; }
+        public int Tactics { get; set; }
     }
 }
