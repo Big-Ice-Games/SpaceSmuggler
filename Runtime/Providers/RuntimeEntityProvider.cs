@@ -18,15 +18,18 @@ namespace SpaceSmuggler.Providers
             skills.Apply(properties);
             stats.Apply(properties);
 
+            EntityShield shield = GetEntityShield(
+                ship.Equipment.Shield.Component,
+                blueprints.GetBlueprint(ship.Equipment.Shield.Component),
+                properties,
+                skills,
+                stats);
+
+
             return new Entity(
                 new EntityDescription(),
                 ship.Appearance,
-                GetEntityShield(
-                    ship.Equipment.Shield.Component,
-                    blueprints.GetBlueprint(ship.Equipment.Shield.Component),
-                    properties,
-                    skills,
-                    stats),
+                shield,
                 new List<EntityWeapon>(),
                 new EntityEnergy(),
                 1,

@@ -71,6 +71,9 @@ namespace SpaceSmuggler.Gameplay.Runtime
         /// </summary>
         public EntityPhysics Physics { get; set; }
 
+        public FP Armor { get; set; }
+        public FP DodgeChance { get; set; }
 
+        public FP Resistance { get; set; }
     }
 }

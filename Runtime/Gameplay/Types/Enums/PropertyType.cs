@@ -48,7 +48,6 @@
         EnergyRegeneration,
         SkillBonus,
         StatBonus,
-        PsiPointsBonus,
         Acceleration,
         MaxForce,
         RotationSpeed,
