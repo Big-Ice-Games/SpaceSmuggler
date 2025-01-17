@@ -17,7 +17,10 @@ namespace SpaceSmuggler.Gameplay.Runtime
             EntityEnergy energy,
             float hullPoints,
             float currentHullPoints,
-            EntityPhysics physics)
+            EntityPhysics physics,
+            FP armor,
+            FP dodgeChance,
+            FP resistance)
         {
             Description = description;
             Appearance = appearance;
@@ -27,6 +30,9 @@ namespace SpaceSmuggler.Gameplay.Runtime
             HullPoints = hullPoints;
             CurrentHullPoints = currentHullPoints;
             Physics = physics;
+            Armor = armor;
+            DodgeChance = dodgeChance;
+            Resistance = resistance;
         }
 
         public Entity(){}

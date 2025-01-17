@@ -1,14 +1,12 @@
 ﻿using System.Collections.Generic;
-using BIG;
 
 namespace SpaceSmuggler.Gameplay.Types
 {
-    [RegistrationRequired]
-    public sealed class Blueprints
+    public static class Blueprints
     {
-        private readonly Dictionary<string, IBlueprint> _blueprints;
+        private static Dictionary<string, IBlueprint> _blueprints;
 
-        public Blueprints(List<IBlueprint> blueprints)
+        public static void InitBlueprints(List<IBlueprint> blueprints)
         {
             _blueprints = new Dictionary<string, IBlueprint>(blueprints.Count);
             foreach (IBlueprint blueprint in blueprints)
@@ -17,9 +15,8 @@ namespace SpaceSmuggler.Gameplay.Types
             }
         }
 
-        public IBlueprint? GetBlueprint(ShipComponent? shipComponent)
+        public static IBlueprint GetBlueprint(this ShipComponent shipComponent)
         {
-            if (shipComponent == null) return null;
             return _blueprints.GetValueOrDefault(shipComponent.BlueprintName);
         }
     }
